@@ -2,8 +2,16 @@ import React from 'react';
 
 import './styles.css'
 
+import Header from "../../components/Header";
+
 const Home = () => {
-    return <h1 className="home-container"> Home </h1> 
+    return (
+        <div className="home-container"> 
+        <Header />
+        </div>
+    )
+    
+   
 };
 
 export default Home;

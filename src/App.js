@@ -1,8 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Home from "../src/Pages/Home";
-import ProductsList from "../src/Pages/ProductsList";
+import './globalstyles.css';
+
+import Home from "../src/pages/Home";
+import ProductsList from "../src/pages/ProductsList";
 
 const App = () => {
   return (
