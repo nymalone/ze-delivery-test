@@ -47,6 +47,10 @@ h2 {
         grid-row-gap: 0px;
       }
 
+      .info__description {
+        font-size: 20px;
+      }
+
       .info__text1 {
         grid-area: 1 / 1 / 2 / 2;
       }
@@ -57,7 +61,7 @@ h2 {
         grid-area: 3 / 1 / 4 / 2;
       }
 
-      .info__text1, .info__text2, .info__text3 {
+      .info__text1, .info__text2 {
         margin-bottom: 30px;
       }
 }
