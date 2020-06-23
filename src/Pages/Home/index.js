@@ -4,11 +4,12 @@ import './styles.css'
 
 import Header from "../../components/Header";
 import HomeContainer from '../../components/HomeContainer';
-import SearchBar from './SearchBar';
+import SearchBar from '../../components/SearchBar';
 import GetPoc from './GetPoc';
 import HowItWorks from "../../components/HowItWorks";
 import AppDownload from "../../components/AppDownload";
 import Footer from "../../components/Footer";
+
 class Home extends Component {
     constructor(props) {
       super(props);
