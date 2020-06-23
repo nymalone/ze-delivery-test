@@ -7,6 +7,7 @@ import HomeContainer from '../../components/HomeContainer';
 import SearchBar from './SearchBar';
 import GetPoc from './GetPoc';
 import HowItWorks from "../../components/HowItWorks";
+import AppDownload from "../../components/AppDownload";
 class Home extends Component {
     constructor(props) {
       super(props);
@@ -35,6 +36,7 @@ class Home extends Component {
             {loading && <GetPoc lat="-23.632919" long="-46.699453" />}
           </HomeContainer>
           <HowItWorks />
+          <AppDownload />
         </div>
       );
     }
