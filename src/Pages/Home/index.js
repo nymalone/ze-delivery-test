@@ -8,6 +8,7 @@ import SearchBar from './SearchBar';
 import GetPoc from './GetPoc';
 import HowItWorks from "../../components/HowItWorks";
 import AppDownload from "../../components/AppDownload";
+import Footer from "../../components/Footer";
 class Home extends Component {
     constructor(props) {
       super(props);
@@ -37,6 +38,7 @@ class Home extends Component {
           </HomeContainer>
           <HowItWorks />
           <AppDownload />
+          <Footer />
         </div>
       );
     }
