@@ -1,3 +1,221 @@
-.products-container {
-    background-color: blue;
+.products__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #fafafa;
 }
+
+.products__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+
+  width: 100%;
+  min-height: 100vh;
+  margin: auto 0;
+}
+
+.products__categories {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  max-width: 1235px;
+  flex-flow: wrap;
+  padding: 16px;
+  margin-top: 15px;
+}
+
+.products__category {
+  height: 48px;
+  width: 171px;
+  display: flex;
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.06);
+  border-image: initial;
+  margin: 4px;
+  flex: 1 1 0%;
+  color: rgb(51, 51, 51);
+  font-size: 14px;
+}
+
+.category__content {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  min-width: unset;
+}
+
+.category__content svg {
+  margin-right: 5px;
+  color: #ffc500;
+  width: 20px;
+  height: 20px;
+}
+
+.products__maincontainer {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  max-width: 1195px;
+  border-radius: 8px;
+  flex-flow: wrap;
+  padding: 16px;
+  margin: 0 auto 30px auto;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
+.products__card {
+    display: flex;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  margin-top: 4px;
+  margin-left: 16px;
+  margin-right: 8px;
+  margin-bottom: 24px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px 0px;
+  font-size: 14px;
+  text-align: left;
+  height: 208px;
+  min-width: 128px;
+  width: 180px;
+  flex-flow: column;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(250, 250, 250);
+  border-image: initial;
+}
+
+.products__card hr {
+    width: 100%;
+    margin: 0px;
+    border-top: 0.4px solid rgb(247, 247, 247);
+}
+
+.card__image {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;  
+}
+
+.card__image img {
+    height: 96px;
+    width: 88px;
+    align-self: center;
+    padding: 16px;
+}
+
+.card__title {
+    padding: 8px;
+    max-height: 32px;
+}
+
+.card__title p {
+    text-align: left;
+    color: rgb(153, 153, 153);
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;
+    overflow: hidden;
+}
+
+.card__price {
+    margin: 10px auto;
+    padding-top: 10px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+}
+
+.add__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 8px auto;
+    background-color: #ffc500;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    border: 0 solid #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 0 0 #fff;
+    width: 120px;
+    height: 40px !important;
+}
+
+.covid__container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+    width: 576px;
+}
+
+.covid__infocard {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 576px;
+    width: 100%;
+    cursor: pointer;
+    background-color: rgb(230, 230, 230);
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.covid__infocard span{
+    width: 100%;
+    text-align: center;
+    padding-left: 32px;
+}
+
+.covid__infocard p{
+    font-size: 14px;
+    color: #333;
+}
+
+.covid__figure {
+    display: flex;
+    flex-shrink: 0;
+    margin: 0px 0px 0px 20px;
+    padding: 4px;
+}
+
+.covid__figure img {
+    width: 64px;
+    height: 64px;
+}
+
+
+/* 
+@media (min-width: 575.98px)
+<style>
+.css-imfncl-card-infoCard {
+    padding: 0px 32px;
+} */

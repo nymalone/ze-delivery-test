@@ -1,48 +1,61 @@
-import React, { Component} from 'react';
+import React, { useState, useEffect } from "react";
+import { useQuery } from "@apollo/react-hooks";
+import { withRouter } from "react-router-dom";
 
-import './styles.css'
+import { GET_POC_LIST } from "../../services/queries";
+
+import "./styles.css";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 import Header from "../../components/Header";
-import HomeContainer from '../../components/HomeContainer';
-import SearchBar from '../../components/SearchBar';
-import GetPoc from './GetPoc';
+import SearchBar from "../../components/SearchBar";
+import GetPoc from "./GetPoc";
 import HowItWorks from "../../components/HowItWorks";
 import AppDownload from "../../components/AppDownload";
 import Footer from "../../components/Footer";
 
-class Home extends Component {
-    constructor(props) {
-      super(props);
-  
-      this.state = {
-        loading: false
-      };
-  
-      this.handleButtonClick = this.handleButtonClick.bind(this);
-    }
-  
-    handleButtonClick() {
-      this.setState({
-        loading: true
-      });
-    }
-  
-    render() {
-      const { loading } = this.state;
-  
-      return (
-        <div className="home">
-          <Header />
-          <HomeContainer>
-            <SearchBar handleButtonClick={this.handleButtonClick} />
-            {loading && <GetPoc lat="-23.632919" long="-46.699453" />}
-          </HomeContainer>
-          <HowItWorks />
-          <AppDownload />
-          <Footer />
+const dateNow = new Date();
+
+const Home = withRouter(({ history }) => {
+  const [latLng, setLatLng] = useState({ lat: null, lng: null });
+
+  const { data, error, loading } = useQuery(GET_POC_LIST, {
+    variables: {
+      algorithm: "NEAREST",
+      lat: latLng.lat,
+      long: latLng.lng,
+      now: dateNow,
+    },
+  });
+
+  useEffect(() => {
+    if (data && data.pocSearch[0])
+      history.push(`/products/${data.pocSearch[0].id}`);
+  }, [data]);
+
+  return (
+    <div className="home">
+      <Header />
+      <div className="main-container">
+        <div className="main-container__input">
+          <div className="main-container__icon">
+            <FaMapMarkerAlt />
+          </div>
+          <SearchBar latLng={latLng} setLatLng={setLatLng} history={history} />
         </div>
-      );
-    }
-  }
-  
-  export default Home;
+      {data && !data.pocSearch[0] ? (
+        <>
+          <p className="main-container__error">
+            Não foi possível encontrar o endereço.
+          </p>
+          </>
+      ) : null}
+      </div>
+      <HowItWorks />
+      <AppDownload />
+      <Footer />
+    </div>
+  );
+});
+
+export default Home;

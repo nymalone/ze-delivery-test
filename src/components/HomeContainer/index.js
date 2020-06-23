@@ -1,11 +1,11 @@
-import React from 'react';
+// import React from 'react';
 
-import "./styles.css";
+// import "./styles.css";
 
-const MainContainer = ({ children }) => (
-  <div className="main-container"> 
-    {children}
-  </div>
-);
+// const MainContainer = ({ children }) => (
+//   <div className="main-container"> 
+//     {children}
+//   </div>
+// );
 
-export default MainContainer;
+// export default MainContainer;
