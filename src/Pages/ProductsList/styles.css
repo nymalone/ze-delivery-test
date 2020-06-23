@@ -212,7 +212,10 @@
     height: 64px;
 }
 
-
+.loading__gif img {
+    width: 400px;
+    height: 400px;
+}
 /* 
 @media (min-width: 575.98px)
 <style>

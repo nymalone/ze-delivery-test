@@ -21,9 +21,6 @@
     position: relative;
     margin-bottom: 20px;
 }
-.google-places-autocomplete {
-    position: unset;
-  }
 
 .main-container__icon svg {
     position: absolute;

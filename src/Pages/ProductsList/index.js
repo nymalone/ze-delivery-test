@@ -16,6 +16,7 @@ import { IoIosBeer } from "react-icons/io";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import covidinfo from "../../assets/info-covid.png";
+import loadingGif from "../../assets/loading.gif";
 
 const ProductsList = withRouter(
   ({
@@ -55,8 +56,8 @@ const ProductsList = withRouter(
         <div className="products__container">
           <div className="products__content">
             <div className="products__categories">
-              <div className="products__category">
-                <p>Carregando os melhores produtos...</p>
+              <div className="loading__gif">
+                <img src={loadingGif} alt="loading gif" />
               </div>
             </div>
           </div>
