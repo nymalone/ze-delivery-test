@@ -1,6 +1,7 @@
 .search-container {
     font-size: 38px;
     color: #333;  
+    width: 592px;
 }
 
 .search-container__text {
@@ -51,4 +52,11 @@
     color: #333;
     width: 21px;
     height: 21px;
+}
+
+@media (max-width: 1024px) {
+    .search-container {
+        font-size: 36px;
+        width: 330px;  
+    }
 }

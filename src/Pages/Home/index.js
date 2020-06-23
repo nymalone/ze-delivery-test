@@ -6,6 +6,7 @@ import Header from "../../components/Header";
 import HomeContainer from '../../components/HomeContainer';
 import SearchBar from './SearchBar';
 import GetPoc from './GetPoc';
+import HowItWorks from "../../components/HowItWorks";
 class Home extends Component {
     constructor(props) {
       super(props);
@@ -31,12 +32,12 @@ class Home extends Component {
           <Header />
           <HomeContainer>
             <SearchBar handleButtonClick={this.handleButtonClick} />
-            {loading && <GetPoc lat="-23.6317681" long=" -46.7014068" />}
+            {loading && <GetPoc lat="-23.632919" long="-46.699453" />}
           </HomeContainer>
+          <HowItWorks />
         </div>
       );
     }
   }
   
   export default Home;
-  
